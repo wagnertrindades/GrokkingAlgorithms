@@ -18,7 +18,7 @@ def binary_search(ordered_list, item)
     end
   end
 
-  return nil
+  nil
 end
 
 puts "The number 8 is in #{binary_search(list, 8)} position"

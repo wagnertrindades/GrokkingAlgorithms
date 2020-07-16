@@ -1,6 +1,6 @@
-disordered_numbers = [8, 3, 10, 1, 7, 2, 9, 5, 4, 6]
+unsorted_numbers = [8, 3, 10, 1, 7, 2, 9, 5, 4, 6]
 
-def findMin(numbers)
+def find_min(numbers)
   min = numbers[0]
   min_index = 0
 
@@ -14,23 +14,23 @@ def findMin(numbers)
   min_index
 end
 
-min_index = findMin(disordered_numbers)
-p "O index do menor número é: #{min_index}"
-p "O menor número é: #{disordered_numbers[min_index]}"
+min_index = find_min(unsorted_numbers)
+p "The index of lower value: #{min_index}"
+p "The lower value: #{unsorted_numbers[min_index]}"
 
-def selectionSort(numbers)
-  ordered_numbers = []
+def selection_sort(numbers)
+  sorted_numbers = []
 
   numbers.length.times do
-    min = findMin(numbers)
-    ordered_numbers.append(numbers.delete_at(min))
+    min = find_min(numbers)
+    sorted_numbers.append(numbers.delete_at(min))
   end
 
-  ordered_numbers
+  sorted_numbers
 end
 
-p "Array with disordered numbers: #{disordered_numbers}"
+p "Array with unsorted numbers: #{unsorted_numbers}"
 
-ordered_numbers = selectionSort(disordered_numbers)
-p "Array with ordered numbers: #{ordered_numbers}"
-p "Array with disordered numbers after selectionSort: #{disordered_numbers}"
+sorted_numbers = selection_sort(unsorted_numbers)
+p "Array with sorted numbers: #{sorted_numbers}"
+p "Array with unsorted numbers after selectionSort: #{unsorted_numbers}"

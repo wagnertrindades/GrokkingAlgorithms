@@ -46,7 +46,6 @@ def print_table(arr_of_hashs)
   puts "---------------------"
 end
 
-
 puts "The unsorted list:"
 print_table(artists)
 
